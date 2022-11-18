@@ -21,7 +21,7 @@ async function getArtwork() {
  const searchTerm = document.getElementsByClassName("search")[0].value;
 
 
-    await fetch(`https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&page=${page}&limit=16&fields=id,title,image_id,artist_display,date_display,artist_type_title,place_of_origin,medium_display`)
+    await fetch(`https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&page=${page}&limit=16&fields=id,title,image_id,artist_display,date_display,artwork_type_title,place_of_origin,medium_display`)
     .then(res => res.json())
     .then(artwork =>{
         console.log(artwork.data);
